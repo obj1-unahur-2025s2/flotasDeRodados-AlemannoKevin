@@ -1,14 +1,43 @@
 import flota.*
 
-describe "Tests de corsa"{
+describe "Tests de un Corsa"{
     
     const corcita = new Corsa(color = azul)
     
-    test "Capacidad Corsa" {
+    test "Capacidad" {
         assert.equals(4, corcita.capacidad())
     }
 
-    test "Velocidad Corsa" {
+    test "Velocidad" {
         assert.equals(150, corcita.velocidadMaxima())
+    }
+
+    test "Peso" {
+        assert.equals(1300, corcita.peso())
+    }
+
+    test "Color" {
+        assert.equals(azul, corcita.color())
+    }
+}
+
+describe "Tests de un Kwid"{
+    
+    const kwid = new RenoKwid(tanqueAdicional = true)
+    
+    test "Capacidad" {
+        assert.equals(3, kwid.capacidad())
+    }
+
+    test "Velocidad" {
+        assert.equals(120, kwid.velocidadMaxima())
+    }
+
+    test "Peso" {
+        assert.equals(1350, kwid.peso())
+    }
+
+    test "Color" {
+        assert.equals(azul, kwid.color())
     }
 }
