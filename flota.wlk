@@ -68,13 +68,10 @@ class AutoEspecial {
     method color() = color
 }
 
-object flota {
+class Dependencia {
     const rodados = []
-    var cantidadEmpleados = 50
+    const cantidadEmpleados
 
-    method cantidadEmpleados(empleados){
-        cantidadEmpleados = empleados
-    }
     method agregarAFlota(rodado) {
         rodados.add(rodado)
     }
@@ -92,7 +89,11 @@ object flota {
     method colorDelRodadoMasRapido() = rodados.max({p => p.velocidad()}).color()
 
     method capacidadFaltante() = cantidadEmpleados - self.capacidadTotalFlota()
+
+    method esGrande() = cantidadEmpleados > 40 and rodados.size() >= 5
 }
 
+object rojo {}
+object verde {}
 object azul {}
 object blanco {}
