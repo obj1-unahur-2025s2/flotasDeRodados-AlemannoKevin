@@ -1,0 +1,14 @@
+import flota.*
+
+describe "Tests de corsa"{
+    
+    const corcita = new Corsa(color = azul)
+    
+    test "Capacidad Corsa" {
+        assert.equals(4, corcita.capacidad())
+    }
+
+    test "Velocidad Corsa" {
+        assert.equals(150, corcita.velocidadMaxima())
+    }
+}
