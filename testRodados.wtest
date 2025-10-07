@@ -41,3 +41,11 @@ describe "Tests de un Kwid"{
         assert.equals(azul, kwid.color())
     }
 }
+
+describe "Tests de dependencias" {
+
+    const deporte = new Dependencia(cantidadEmpleados=45)
+    const cultura = new Dependencia(cantidadEmpleados=31)
+    var cachito = new Corsa(color = rojo)
+
+}
